@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/*  SWP Vragen */
+
+#wpadminbar {
+	display: none;
+	
+}
+
+body {
+	counter-reset: cat-counter;
+	padding: 0 20px;
+	background-color: #fff;
+	background: none;
+	
+}
+
+#swp-dashboard-vragen {
+	padding: 0 20px;
+	
+}
+
+#back-to-dash {
+	height: 50px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99999;
+	text-align: center;
+	
+}
+
+#back-to-dash a {
+	color: #333;
+	
+}
+
+#back-to-dash a i, #back-to-dash a span {
+	line-height: 50px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 8px;
+	
+}
+
+#back-to-dash a i {
+	font-size: 30px;
+	
+}
+
+.container {
+    max-width: 900px;
+	
+}
+
+.vraag-categorie {
+    padding-top: 60px;
+
+}
+
+.well {
+    margin-bottom: 0;
+    
+}
+
+#progress-container {
+    position: fixed;
+    bottom: 0;
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    z-index: 999;
+    left: 0;
+}
+
+.progress {
+    max-width: 900px;
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.progress-bar {
+	box-shadow: none;
+	
+}
+
+.progress-bar.empty {
+    color: #333;
+    margin: 0 8px;
+	
+}
+
+strong.error {
+	color: #d50000;
+	
+}
+
+#swp-vragen-container {
+	margin-top: 50px;
+	
+}
+
+#vragen-container {
+	border-left: 1px #e0e0e0 solid;
+    padding: 0;
+	
+}
+
+#vragen-container ol {
+    list-style: none;
+    padding-left: 33px;
+	margin-left: 0;
+	
+}
+
+#vragen-container ol li {
+	counter-increment: cat-counter;
+	
+}
+
+#vragen-container ol li:before {
+    content: counter(cat-counter);
+    position: relative;
+    top: 110px;
+    left: -45px;
+    background-color: #5cb85c;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    outline: 10px solid #fff;
+}
+
+/*div.vraag:before {
+	content: "";
+	background-color: #e0e0e0;
+	width: 1px;
+	height: 270px;
+	display: block;
+	position: absolute;
+	-ms-transform: translate(-34px, -22px);
+	-webkit-transform: translate(-34px, -22px);
+	transform: translate(-34px, -22px);
+	
+}*/
+
+#vragen-container #stappen-lijn {
+	background-color: #e0e0e0;
+	width: 1px;
+	/* position: relative; */
+	margin-left: 6px;
+	height: 100%;
+}
+
+#vragen-container ol li:nth-child(1) .vraag-categorie {
+    padding-top: 0!important;
+
+}
+
+#vragen-container ol li:nth-child(1):before {
+    top: 50px;
+    
+}
+
+#status-bar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 9999;
+	line-height: 50px;
+	text-align: center;
+	left: 0;
+}
+
+form.trello-uploading input {
+    opacity: 0;
+
+}
+
+.trello-uploading {
+    background-image: url(img/loading.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 48px;
+    height: 48px;
+    animation: 500ms loading infinite linear;
+
+}
+
+#laatste-stap {
+	margin-bottom: 200px;
+	padding: 0;
+	
+}
+
+#laatste-stap::before {
+    position: relative;
+    top: 2px;
+    left: -11px;
+    background-color: #5cb85c;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    outline: 10px solid #fff;
+}
+
+#laatste-stap .status {
+    margin: -20px 0 0 40px;
+}
+
+@media only screen and (max-width: 500px) {
+	.input-group-addon {
+		display: none;
+		
+	}
+	
+	input.form-control {
+		border-radius: 6px!important;
+		
+	}
+	
+	.input-group.input-group-lg {
+		width: 100%;
+		
+	}
+	
+}
+
+@keyframes loading {
+    from { transform: rotate(0); }
+    to { transform: rotate(180deg); }
+
+}
+
+#honderd-procent {
+	display: none;
+	margin-bottom: 8px;
+	margin-top: -16px;
+	padding: 16px;
+
+}
+
+#honderd-procent h3 {
+	margin-top: 0px;
+	
+}
